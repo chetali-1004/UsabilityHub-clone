@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UsabilityHub | User Research & usability testing platform </title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media-queries.css">
     <link rel="icon" type="image/x-icon" href="./assets/images/Screenshot 2023-07-01 154710.png">
 </head>
 <body>
@@ -22,7 +23,7 @@
             <a href = "#" class="company-logo">
                 <img src="./assets/images/asset 1.png" alt="Company logo">
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <ul class="flex">
                     <li><a href="#"class="hover-link">Products</a></li>
                     <li><a href="#"class="hover-link">Customers</a></li>
@@ -32,6 +33,9 @@
                     <li><a href="#"class="hover-link primary-button">Sign up</a></li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
     </nav>
     
@@ -146,7 +150,10 @@
 
     <!-- big features section-2 -->
     <section class="big-feature-section">
-        <div class="container flex big-feature-container">
+        <div class="container flex big-feature-container" id="second-big-feature">
+            <div class="feature-img" style="flex-grow: 2;">
+                <img src="./assets/images/asset 21.png" alt="">
+            </div>
             
             <div class="feature-desc flex" style="flex-grow: 1;">
                 <h4 class="small-heading">Optimisation for</h4>
@@ -163,10 +170,6 @@
                         <p>Digital Marketing Analyst</p>
                     </div>
                 </div>
-            </div>
-
-            <div class="feature-img" style="flex-grow: 2;">
-                <img src="./assets/images/asset 21.png" alt="">
             </div>
         </div>
     </section>
@@ -267,8 +270,7 @@
     <!-- footer -->
     <footer>
         <div class="flex footer-container">
-            <a href="#" class="company-logo"><img src="./assets/images/asset 1.png" alt="">
-            </a>
+            <a href="#" class="company-logo"><img src="./assets/images/asset 1.png" alt=""></a>
             <div class="link-column flex">
                 <h4>Product</h4>
                 <div class="links flex">
@@ -307,6 +309,7 @@
         </div>
     </footer>
 
+    <!-- subfooter -->
     <div class="subfooter">
         <div class="container flex subfooter-container">
             <a href="#" class="hover-link">Privacy policy</a>
@@ -317,5 +320,14 @@
         </div>
     </div>
     <script src="https://kit.fontawesome.com/369ededd87.js" crossorigin="anonymous"></script>
+
+    <script>
+        const toggleButton = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        })
+    </script>
 </body>
 </html>
